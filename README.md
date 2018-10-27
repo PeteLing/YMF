@@ -3,6 +3,7 @@ simple poc framework
 YMF POC框架编写
 Day1 – POC框架的思考
 POC框架功能主要有2个方面：
+
 1）	提供POC给用户调用测试
 
 2）	便于用户编写自己的POC
@@ -22,8 +23,13 @@ Day2 – 功能细化并实现
 3.	针对多个URL进行批量poc验证
 实现上述功能，首先先决定好用线程还是进程，在angelSword中用了进程池并发，但是针对密集IO操作，应该用线程比较合适，故决定用线程池并发执行poc；
 
-首先完成pocdb获取所有poc对象，修改get_poc_name_description函数，改为获取所有poc类名和描述，然后使用eval动态调用类；这样做的好处在于后续只需要编写poc放在目录分好类的目录下即可，不必在pocdb修改其他代码。
+首先完成pocdb获取所有poc对象，修改get_poc_name_description函数，改为获取所有poc类名和描述，然后使用eval动态调用类；
+这样做的好处在于后续只需要编写poc放在目录分好类的目录下即可，不必在pocdb修改其他代码。
+
 修改pocdb为pocManager，将所有poc类存放在poc_dict字典中，定义poc_set做管理，区分已经验证的poc和没有验证的poc。
+
 完成启动文件Ymf.py多线程类的基本实现
+
 完成具体业务功能Ymf.py（输出比较粗糙）
+
 base提供基础属性、函数等
