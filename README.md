@@ -12,8 +12,8 @@ POC框架功能主要有2个方面：
 暂时没有什么思路，先写一下基础函数（get_poc_name_description）获取所有poc的名字和description。
 
 Day2 – 功能细化并实现
-1）	先添加2个分类system和Information并根据YmfPoc框架简单编写几个poc（poc命名也按照规范，美观）
-2）	功能方面：
+1）先添加2个分类system和Information并根据YmfPoc框架简单编写几个poc（poc命名也按照规范，美观）
+2）功能方面：
 1.	针对一个URL进行批量poc验证
 2.	针对多个URL进行单个poc验证
 3.	针对多个URL进行批量poc验证
